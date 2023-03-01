@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularios en html</title>
+  </head>
+  <body>
+    <!--EL ID, NOMBRE, Y VALUE SORVEN PARA ACCIONES DE LOGICA-->
+    <!--LA PROPIEDAD DE "NOVALIDATE" EN LA ETIQUETA FORM ANULA LAS VALIDACIONES
+        EL "NOVALIDATE" PUEDE IR EN EL FORM COMO EN EL BOTÓN-->
+    <h1>Formularios en html</h1>
+    <!--METODO GET Y METODO POST PARA MANDAR LA INFO
+        METODO GET ES UN METODO HTTP - SE ENVÍA COMO PARTE DE LA URL
+        METODO POST PARA QUE NO SE VEA LA INFO DESDE LA URL
+            Action sirve para decir que servidor procesará la información
+            "TARGET='Self" permite que se vea la respuesta en otra ventana
+            "autocomplete='off" para que no se autocompleten-->
+    <form action="mi_servidor" target="_self" autocomplete="on">
+      <!--REQUIRED SIRVE PARA HACER CAMPO OBLIGATORIO-->      
+    <!--Fieldset sirve para agregar un marco al formulario-->
+      <fieldset>
+        <!--Legend para dar un texto al fieldset-->
+        <legend>Datos persona:</legend>
+        <br/>
+        <!--Agregar el id persona para enviar al servidor (readonly)
+            si se agrega "disabled", el dato ya no se envía al servidor-->
+            <label for="idPersona">Persona:</label><br />
+            <input type="text" id="idPersona" name="idPersona" 
+            readonly="true" value="100" disabled="true"  /><br/><br/>
+        <!--Enviar elemento oculto del sistema (hidden)-->
+            <input type="hidden" id="sistema" name="sistema" value="SAP" >
+        <!--Text type-->
+            <label for="nombre">Nombre:*</label><br />
+            <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Ingresar nombre"
+            value=""
+            required="true"
+            />
+            <br /><br />
+        <!--Text type-->
+            <label for="apellido">Apellido:*</label><br />
+            <input
+            type="text"
+            id="apellido"
+            name="apellido"
+            placeholder="Ingresar apellido"
+            value=""
+            required="true"
+            />
+            <br /><br />
+        <!--Password type-->
+            <label for="password">Password:*</label><br />
+            <input
+            type="password"
+            id="password"
+            name="password"
+            value=""
+            required="true"
+            />
+            <br /><br />
+        <!--Email type-->
+            <label for="email">Email:*</label><br />
+            <input type="email" id="email" name="email" value="" required="true" />
+            <br /><br />
+            <!--Numerico type-->
+            <!--Step sirve-poner valores con . decimal en input numerico-->
+        <!--Number type-->
+            <label for="edad">Edad:*</label><br />
+            <input
+            type="number"
+            id="edad"
+            name="edad"
+            value=""
+            required="true"
+            step="any"
+            />
+            <br /><br />
+        <!--RADIOBUTTON
+                para sólo seleccionar una opción se debe llamar "name" el mismo-->
+            <label for="genero">Género:*</label><br />
+            <input type="radio" id="femenino" name="genero" value="femenino" />
+            <label for="femenino">Femenino</label><br />
+            <input type="radio" id="masculino" name="genero" value="masculino" />
+            <label for="masculino">Masculino</label><br />
+            <br /><br />
+        <!--Checkbox type-->
+            <label for="">Género música favorita</label><br />
+            <input type="checkbox" id="clasica" name="musica" value="clasica" />
+            <label for="clasica">Clásica</label><br />
+            <input type="checkbox" id="jazz" name="musica" value="jazz" />
+            <label for="jazz">Jazz</label><br />
+            <input type="checkbox" id="pop" name="musica" value="pop" />
+            <label for="pop">Pop</label><br />
+            <input type="checkbox" id="rock" name="musica" value="rock" />
+            <label for="rock">Rock</label><br />
+            <br /><br />
+        <!--Select type-->
+            <label for="autos">Marca auto favorito</label>
+        <!--En select si se le agrega la propieda "multiple='true'" permite seleccionar varias opciones-->
+            <select name="autos" id="autos" multiple="true">
+            <option value="volvo">Volvo</option>
+            <option value="bmw">BMW</option>
+            <option value="audi">Audi</option>
+            <option value="Null" selected="true">Seleccionar</option>
+            <!--Slected es para poner un valor como default-->
+            </select>
+            <br /><br />
+        <!--Text área type-->
+            <label for="comentario">Comentario:</label><br />
+            <textarea
+            name="comentario"
+            id="comentario"
+            cols="30"
+            rows="2"
+            ></textarea>
+            <br /><br />
+        <!--Botón enviar normal-->
+            <input type="submit" value="Enviar" />
+        <!--Botón enviar sin validar-->
+            <input
+            type="submit"
+            name=""
+            id=""
+            formnovalidate="formnovalidate"
+            value="Enviar sin validar"
+            />
+        <!--Botón limpiar datos-->
+        <input type="reset" value="Restablece">
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+body{
+    background-color: dodgerblue;
+    color: cornsilk;
+    background-image: url("/img/fondo.png");
+    /*Para que se repita sólo en eje x*/
+        /*background-repeat: repeat-x;*/
+    /*Para que se repita sólo en eje x*/
+        /*background-repeat: repeat-y;*/
+    /*Para que no se repita la img de backgound*/
+        background-repeat: no-repeat;
+    /*Donde cargar la imagen si no ocupa toda la imagen*/
+        background-position: right top;
+    /*Para que la imagen de fondo si siga el scroll*/
+        /*background-attachment: scroll;*/
+    /*Para que la imagen de fondo no siga el scroll*/
+        background-attachment: fixed;
+    /*TODO SE PUEDE RESUMIR EN PROPIEDAD BACKGROUND MENOS BG-ATTACHEMENT*/
+        /*background: dodgerblue url("/img/fondo.png") no-repeat right top;*/
+    
+}
+h1{
+    text-align: center;
+    background-color: dodgerblue;
+    /*height: 1000px;*/
+}

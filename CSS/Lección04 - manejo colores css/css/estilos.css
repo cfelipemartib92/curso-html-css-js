@@ -1,0 +1,48 @@
+
+h1{
+    text-align: center;
+    color: #e63946;
+}
+.caja{
+    padding: 10px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 10px;
+    /*div es un elemento de bloque, vamso a flotarlo a la izquierda para que se vayana organizando inline*/
+    float: left;
+}
+.rojo{
+    background-color: crimson;
+}
+.rosa{
+    background-color: deeppink;
+}
+.rgb{
+    background-color: rgb(131,56,236);
+    /*background-color: rgb(131,56,236); - 255 es el valor máximo*/
+}
+.rgba{
+    /*Agregando a rgb la transparencia*/
+    background-color: rgba(131,56,236,.5);
+}
+.hexadecimal{
+    /*Hexadecimal 16 digitos: 0-9 y a-f*/ 
+    /*primer par= rojo - segundo par=verde - tercer par=azul */
+    /*Si se repite la letra o el numero se utiliza sólo una letra ffffff = fff o ffaa22=fa2*/  
+    background-color: #0091ad;
+}
+.hexadecimal-transparencia{
+    /*El último par va con trasnparencia - FF es máximo - 00 es mínimo */
+    background-color: #0090ad87;
+}
+.hsl{
+    /*Hue o matiz de 0(rojo) 120(verde) 240(azul) a 360 , saturación en %, iluminación en %*/
+    background-color: hsl(195, 100%, 50%);
+}
+.hsla{
+    /*Hue o matiz de 0(rojo) 120(verde) 240(azul) a 360 , saturación en %, iluminación en %*/
+    background-color: hsla(195, 100%, 50%, .5);
+}

@@ -1,0 +1,41 @@
+h1{
+    color: #ef476f;
+    text-align: center;
+    background-color: beige;
+/*"text-transform" Convertir texto a mayus*/
+    text-transform: uppercase;
+/*"text-shadow" agregar sombras eje x, eje, difuminación, color*/
+    text-shadow: 2px 2px 1px #ced4da;
+/*Separar las letras*/
+    letter-spacing: 7px;
+/*Separar las palabras*/
+    word-spacing: 20px;
+/*Decorar texto*/
+    text-decoration: overline underline;
+}
+.caja{
+    padding: 15px;
+    margin: auto;
+    width: 70%;
+    background-color: #219ebc;
+    border-radius: 5px;
+    color: white;
+}
+.texto{
+    text-align: justify;
+/*Direction= que se lea el texto de izquierda a derecha*/
+    direction: ltr;
+    /*direction: rtl;*/
+/*Decoración de texto*/
+    text-decoration: line-through;
+/*Text ident = en la primera frase un tab*/
+    text-indent: 30px;
+/*separar lineas del texto (normalmente 1.2) */
+    line-height: 1.5;
+/*White-space= no respectar el div*/
+    /*white-space: nowrap; - no respectar el espacio del div*/
+    white-space: normal;
+/*Agregar sombras*/
+    text-shadow: 1px 1px 2px #ced4da;
+    
+}

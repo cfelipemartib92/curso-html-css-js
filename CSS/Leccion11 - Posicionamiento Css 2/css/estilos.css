@@ -1,0 +1,95 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+
+div.contenedor{
+    position: relative;
+    border: 3px dashed greenyellow;
+    width: 30%;
+    margin: auto;
+}
+
+img.imagen{
+    width: 100%;
+    opacity: 0.2;
+}
+
+div.centro{
+    position: absolute;
+    top: 50%;
+    /*border: 1px solid blue;*/
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+/*Overflow el contenido se sale del elemento*/
+
+div.overflow{
+        border: 3px dashed greenyellow;
+        width: 30%;
+        height: 100px;
+        margin: auto;
+        /*overflow: visible;*/
+        /*overflow: hidden;*/ /*ocultar lo que se sale del div*/
+        /*overflow:scroll;*/ /*Se agrega barra de screooll para ver el contenido*/
+        overflow: auto; /*pone el scroll de ser necesario*/
+                        /*Sòlo sirve si se agrega un height definido*/
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+div.float{
+    border: 3px dashed greenyellow;
+    width: 30%;
+    height: 100px;
+    overflow: auto; 
+    float: left;
+}
+div.float.izquierda{
+    border: 3px dashed rgb(187, 59, 13);
+}
+div.float.derecha{
+    border: 3px dashed rgb(107, 129, 170);
+    float: right;
+}
+div.overflow.clearCentro{
+    clear: left;
+    clear: right;
+    clear: both; /*PARA FLOTAR EN UNA NUEVA LINEA*/
+    border: 3px dashed darkorange;
+    margin: auto;}
+
+div.contenedor.inline{
+    border: 3px dashed #a8dadc;
+    width: 80%;
+    overflow: auto;
+    margin: auto;
+}
+span{
+    font-weight: bolder;
+    font-style: italic;
+    font-size: larger;
+    background-color: #a8dadc;
+    border: 1px solid #457b9d;
+    height: 50px;
+    padding: 5px;
+    display: inline-block;
+}
+.menu{
+    list-style: none;
+    text-align: center;
+}
+
+.menu li{
+    display: inline-block; /*sirve para volver un block y que pueda usar propiedades de block*/
+    padding: 15px;
+    margin: 20px;
+    background-color: #e63946;
+    border-radius:5px;
+}
+a{
+    text-decoration: none;
+    color:#f1faee;
+}

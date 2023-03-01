@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas Html</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Trocchi&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <table>
+        <!--TITULO DE NUESTRA TABLA-->
+        <caption>Listado de personas</caption>
+        <tr> <!--Es una row de la tabla-->
+            <!--Es el encabezado de la tabla-->
+            <th colspan="2">Nombre</th>
+            <!--COLSPAN SIRVE PERA UNIFICAR N CELDAS-->
+            <th>Email</th>            
+        </tr>
+        <tr>
+            <td>Felipe</td>
+            <td>Martinez</td>
+            <td>fmarti@mail.com</td>
+        </tr>
+        <tr>
+            <td>Patricia</td>
+            <td>Betancurt</td>
+            <td>pbeta@mail.com</td>
+        </tr>
+        <tr>
+            <td>Juan</td><!--Agregar data a nuestra tabla-->
+            <td>Perez</td>
+            <td rowspan="2">jperez@mail.com</td>
+            <!--ROWSPAN SIRVE PARA EXPANDIR CELDA N RENGLONES-->
+        </tr>
+        <tr>
+            <td>Maria</td><!--Agregar data a nuestra tabla-->
+            <td>Lara</td>
+            <!--<td>mlara@mail.com</td> SE ELIMINA LA CELDA YA QUE SE EXPANDIO LA CELDA DOS FILAS-->
+        </tr>
+        
+    </table>
+</body>
+</html>

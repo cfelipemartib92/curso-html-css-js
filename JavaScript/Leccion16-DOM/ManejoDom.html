@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!--Para reconocer acentos-->
+    <title>Manejo DOM con JavaScript</title>
+    <style>
+    </style>
+</head>
+<body onload="entrar()">
+    <!--FORMAS PARA MODIFICAR ELEMENTOS HTML EN JS-->
+    <!-- MALA PRACTICA <h1 id="titulo" onclick="this.innerHTML='Nuevo título'" ondblclick="this.innerHTML='Manejo DOM con JS'">Manejo DOM con JS</h1>-->
+    <!--BUENA PRACTICA:<h1..-->
+    <h1 id="titulo" onclick="cambiarTexto(this)" >Manejo DOM con JS (hazme click y cambiaré)</h1>
+    <h1 id="titulo2">Cambio en JS sin onclick, sino desde JS directamente (do me click)</h1>
+    <h1 id="titulo3">hazme click para cambiar texto en div</h1>
+    <h3 onmouseover="rojo(this)" onmouseout="azul(this)">
+        Pasame el mouse por encima onMouseover
+    </h3>
+    <p id="par2">nueva info1</p>
+    <p>nueva info2</p>
+    <button onclick="mostrar()">Mostrar</button>
+    <br><br>
+    <img id='imagen' src="http://globalmentoring.com.mx/imagenes/javascript.png" alt="">
+    <br><br>
+    <button onclick="source()">Cambiar Source</button>
+    <br><br>
+    <div id="mostrarDiv">
+    </div>
+    <div id="mostrarDiv2"></div>
+    <br><br>
+    Nombre2: <input type="text" id="nombre2" onchange="convertir(this)"/>
+
+
+    <script>
+        //Evento onload 
+            function entrar (){
+                alert('Entrando a la página web'); //popup - alerta al entrar
+                //validar si están habilitadas las cookies
+                let texto='';
+                if (navigator.cookieEnabled){//navigator está definifdo en js
+                    texto='Las cookies están habilitadas'
+                }
+                else {
+                    texto='Las cookies están inhabilitadas'
+                }
+                document.getElementById('mostrarDiv2').innerHTML=texto;
+            }
+            // document.write('Saludos desde JavaScript')//sobreescribir en sitio
+
+            // function mostrar(){
+            //     document.write('Adios'); // puede sobreescribir - sirve para mandar info
+            // }
+        //Modificar contenido elemento html
+            // function mostrar(){
+            //     document.getElementById('titulo').innerHTML = 'Nuevo Titulo';
+            // }
+
+        //Para concatenar se le agrega unn + - agregar un color rojo
+            function mostrar(){
+                document.getElementById('titulo').innerHTML +='<br/><br/> Nuevo Titulo';
+                document.getElementById('titulo').style.color ='red';
+            }
+        //cambio de valor atributos en DOM HTML 
+            //AJUSTAR EL SOURCE DE UNA IMAGEN
+            function source(){
+            document.getElementById('imagen').src ='http://globalmentoring.com.mx/imagenes/html5.png';
+            }
+        //Modificar estilos de un html
+            document.getElementById('titulo').style.color ='blue'; // se puede ingresar en una funcion
+        //Cambiar texto mediante un metodo
+            function cambiarTexto(h1){
+                console.log(h1);//imprime toda la etiqueta
+                console.log(h1.innerHTML);//imprime titulo inicial
+                h1.innerHTML = 'Nuevo titulo con funcion JS';
+                console.log(h1.innerHTML);//imprime titulo nuevo
+            }
+        //Cambiar tecto desde js
+            document.getElementById('titulo2').onclick=cambiarTexto2;
+            //funcion cambiarTexto2
+            function cambiarTexto2(){
+                document.getElementById('titulo2').innerHTML='Nuevo título con funciones';
+            }
+        //Cambiar texto de otro elemento
+            document.getElementById('titulo3').onclick=cambiarTexto3;
+            //funcion cambiarTexto2
+            function cambiarTexto3(){
+                document.getElementById('mostrarDiv').innerHTML='Nuevo texto desde el título3';
+                document.getElementById('par2').innerHTML='Soy un nuevo parrafo ajustado por JS';
+            }
+        //Evento onchange - cambiar texto a mayus
+            // function convertir(){
+            //     let nombre2 = document.getElementById('nombre2')
+            // }
+            function convertir(nombreInput){
+                nombreInput.value = nombreInput.value.toUpperCase();
+            }
+        //Onmouse over - onmouse out
+            function rojo(titulo1){
+                titulo1.style.color= 'red';
+            }
+            function azul(titulo1){
+                titulo1.style.color= 'blue';
+            }
+
+    </script>
+</body>
+
+</html>

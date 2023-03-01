@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!--Para reconocer acentos-->
+    <title>Manejo DOM con JavaScript</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <h1 onmouseover="rojo(this)" onmouseout="azul(this)">
+        Pasame el mouse por encima onMouseover
+    </h1>
+    <h2 onmousedown="orange(this)" onmouseup="purple(this)"
+    onclick="verde(this)">
+        click encima para onMouseDown & onmouseUp
+    </h2>
+
+    <script>
+        //Onmouse over - onmouse out
+        function rojo(titulo1){
+                console.log('onmousedown rojo')
+                titulo1.style.color= 'red';
+            }
+        function azul(titulo1){
+            titulo1.style.color= 'blue';
+        }
+        //onmousedown & onmouseup
+        function orange(titulo1){
+                console.log('onmousedown orange');
+                titulo1.style.color= 'orange';
+            }
+        function purple(titulo1){
+            console.log('onmouseup purple');
+            titulo1.style.color= 'purple';
+        }
+        //onclick
+        function verde(titulo1){
+            console.log('onclick green');
+            titulo1.style.color= 'green';
+        }
+    </script>
+</body>
+
+</html>

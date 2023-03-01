@@ -1,0 +1,82 @@
+h1{
+    text-align: center;
+    color: blueviolet;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+/*h2 o se puede escribir=*/ .rojo, .rosa, .amarillo, .violeta, .verde, .azul{
+   color: black; 
+}
+.rojo{
+    border: 10px solid lime;
+    background-color: firebrick;;
+}
+.rosa{
+    border: 10px solid green;
+    background-color: hotpink;
+}
+.amarillo{
+    border: 10px solid blue;
+    background-color: gold;
+}
+.violeta{
+    border: 10px dashed rgb(3, 235, 243);
+    background-color: violet;
+}
+.verde{
+    border: 10px double red;
+    background-color: lime;
+}
+.azul{
+    border: 10px dotted  rgb(247, 223, 10);
+    background-color: turquoise;
+}
+.punteado{
+    border-style: dotted;
+    border-width: 2px 4px 6px 8px;
+}
+.discontinuo{
+    border-style:dashed;
+    border-width: medium;
+}
+.solido{
+    border: solid red;
+    border-width: 3px 5px 1px;
+    border-color: red;
+}
+.doble{
+    border-style:double;
+    border-width: 5px 10px;
+}
+.surco{
+    border: 10px groove;
+    /*border-width: 10px;
+    border-style: groove;*/
+    border-color: blue;
+}
+.cresta{
+    border-style: ridge;
+    border-width: 10px;
+    border-color: crimson blue pink green;
+}
+.recuadro{
+    border: 5px inset;
+    border-color: rgb(31, 100, 230, 0.5);
+}
+.recuadro-outset{
+    border: 5px outset;
+}
+.sin-borde{
+    border: none;
+}
+.oculto{
+    border: hidden;
+}
+.mixto{
+    border-style: dotted solid dashed double;
+}
+.redondeado{
+    border: solid blueviolet;
+    border-width: 5px;
+    /*REDONDEAR*/
+    border-radius: 15px 20px 10px 2px;
+}

@@ -1,0 +1,68 @@
+h1{
+    color: #e63946;
+    text-align: center;
+}
+p{
+    /**Estamos usando colores de la paleta de colores https://coolors.co/palette/e63946-f1faee-a8dadc-457b9d-1d3557 */
+    color: #457b9d;
+    background-color: rgb(214, 167, 148);
+    padding-top: 15px 10px;
+    border: 10px solid #1d3557;
+    /*margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;*/
+    margin: 20px 10px /*20px*/ /*10px*/; /*Para igualar el margin iz y der se dejan 3 valores (top, der, bottom)*/
+    /*Este es el orden de los elementos (content,padding, border, margin) */
+    /*Para centrar de manera horizontal*/
+    /*margin: auto 50px ; */
+    /*CENTRAR TEXTO:*/
+    text-align: center;
+}    
+
+/*Tambien se puede aplicar estilos a dos etiquetas a la vez a:link,a:visited*/
+a:link{
+    /*COLOR DEL LINK*/
+    color:#fb8500;
+    text-decoration: none;
+    background-color: #b5179e;
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block; /*Para no encimar los elementos*/
+}
+a:visited{
+    /*LINK VISITADO*/
+    color:#219ebc;
+    text-decoration: none;
+    background-color: #b5179e;
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block; /*Para no encimar los elementos*/
+}
+
+a:hover{
+    /*CUANDO NOS PONEMOS ENCIMA DEL LINK*/
+    color: #8ecae6;
+    text-decoration: underline;
+    background-color: #f72585;
+    padding: 10px 10px;
+    text-align: center;
+    display: inline-block; /*Para no encimar los elementos*/
+}
+a:active{
+    /*REACCIÍON CUANDO DAMOS CLICK A LINK*/
+    color:#023047;
+    text-decoration: underline;
+    display: inline-block; /*Para no encimar los elementos*/
+}
+
+/*Se hacen comentarios de esta manera*/
+
+[id="container"]{
+    display: flex;
+    display: flex;
+    gap: 5px;
+    background-color: red;
+    
+    
+}

@@ -1,0 +1,69 @@
+h1{
+    text-align: center;
+    color: crimson;
+}
+/*TODO LO DIV SON STATIC POR DEFAULT*/
+
+div.relativo{
+        max-width: 300px;
+        height: 200px;
+        position: relative;
+        top: 10px;
+        left: 100px;
+        border: 3px solid cornflowerblue;
+}
+
+div.absoluto{    
+/*Max width es similar al % por que ajusta el elemento a un máximo y se ajusta a la pantall*/
+    /*width: 50%;*/ /*El tamaño se ajusta automáticamente*/    
+        /*max-width: 400px;*/
+        /*max-width: 50%;*/
+        border: 3px solid firebrick;
+/*Maring auto hace que el margen al lado izquierdo y lado derecho sea el mismo*/
+        /*margin: auto;*/
+/*Con position no permite ajustar top, right, ledt, bottom*/
+/*position relative permite ajustar la posicion segun indicaciones t,r,b,l*/
+/*Position fixed se ajusta la pisicion a la pantalla directamente*/
+/*Position: abosulute; se ubicara dentro del elemento div no por fuer - fixed es en toda la pantalla
+        o usara la pàgina body */
+        position: absolute;
+        bottom: 20px;
+        right: 10px;
+}
+
+div.absolutosticky{
+        /*Sticky inisicalmente se usa como relativo - se vuelve fija despuès de salir el view port segùn el top agregado*/
+        position: sticky; 
+        /*Se se busca usar con safari se tiene que agregar una correcciòn*/
+        position: -webkit-sticky; /*PARA SAFARI - NO SIRVE EN EXPLORER*/
+        top: 10px;
+        border: 3px solid firebrick;
+}
+
+div.estatico-z-index{
+        position: static;
+        top: 10px; /*ninguna propiedad afecta un elemento static */
+        padding: 15px;
+        border: 3px solid greenyellow;
+        background-color: whitesmoke;
+}
+
+div.relativo-z-index{
+        position: relative;
+        top: -10px;
+        left: 10px;
+        padding: 15px;
+        border: 3px solid blueviolet;
+        background-color: whitesmoke;
+        /*z-index: -1; *//*que se puede mostrar de otros elementos*/
+}
+
+div.absoluto-z-index{
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        padding: 100px;
+        border: 3px solid cornflowerblue;
+        background-color: whitesmoke;
+        z-index: 1;
+}

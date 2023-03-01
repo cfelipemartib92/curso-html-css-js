@@ -1,0 +1,25 @@
+ol{
+    list-style: none;
+    /*A2. Se avisa que se va a utilizar el contador "Counter-reset:"*/
+        /*A21 Esto es para que se reinicie cada vez que empeiza una order list*/
+    counter-reset: contador;
+
+}
+
+ol li{
+    /*A3. Se avisa cómo va a aumentar el contador con función "Counter increment"*/
+    counter-increment: contador;
+}
+
+/*BEFORE PARA AGREGAR UN TEXTO ANTES DE "LI"*/
+ol li::before{
+    /*comentar algo antes de que empiece nuestra lista*/
+    /*A1. Se peude agregar variable llamada contador*/
+    content: 'Curso 'counter(contador) ') ';
+    color: #ff6f00;
+}
+
+/*AFTER PARA AGREGAR UN TEXTO DESPUÉS DE "LI"*/
+ol li::after{
+    content: '...';
+}

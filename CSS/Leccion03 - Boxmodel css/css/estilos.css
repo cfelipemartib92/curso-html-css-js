@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    text-align: center;
+    color: #e63946;
+    margin:20px
+}
+div{
+    padding: 10px 5px 15px 20px;
+    border: 15px solid #457b9d;
+    /*Para centrar elemento podemos usar margin auto*/
+        /*margin: 20px ;*/
+        /*margin: 100px auto;*/
+        margin-left: 100px;
+        margin: 20px;
+    background-color: #f1faee;
+    
+    /*El outline es otra capa entre el el margen y borde, dentro del margen*/
+    /*Se puede sobreponer sobre los demás elementos*/
+        outline: 10px solid #a8dadc;
+    /*Outlineofset - separación entr el borde y el outline*/
+        outline-offset: 10px 5px 3px 2px;  
+    /*Establecer un ancho fijo de nuestro elemento*/
+    /*IMPORTANTE*/
+        box-sizing: border-box;
+    /*Max width es mucho más flexible si se hace más pequeña la pantalla*/
+    /*width: 300px;*/
+        max-width:300px ;
+            /*max-width: 100%; co n portcentaje*/
+        max-height: 100px;
+}
+p.interno{
+    /*Heredar propiedades de elemento padre*/
+        margin: inherit;
+}
+
+.caja1{
+    padding: 10px 5px 15px 20px;
+    border: 1px solid #457b9d;
+    /*Para centrar elemento podemos usar margin auto*/
+        /*margin: 20px ;*/
+        /*margin: 100px auto;*/
+        /*margin-left: 100px;*/
+        /*MARGIN COLLAPSE UNE Y UTILIZA EL MARGEN MAYOR ENTRE MARGEN SUP E INFERIOR*/
+        margin: 30px;
+    background-color: #f1faee;
+    /*Establecer un ancho fijo de nuestro elemento*/
+    /*IMPORTANTE*/
+        box-sizing: border-box;
+    /*Max width es mucho más flexible si se hace más pequeña la pantalla*/
+    /*width: 300px;*/
+        max-width:300px ;
+            /*max-width: 100%; co n portcentaje*/
+        /*max-height: 100px;*/
+}
+
+.caja2{
+    padding: 10px 5px 15px 20px;
+    border: 1px solid #457b9d;
+    /*Para centrar elemento podemos usar margin auto*/
+        /*margin: 20px ;*/
+        /*margin: 100px auto;*/
+        /*margin-left: 100px;*/
+        margin: 10px;
+    background-color: #f1faee;
+    /*Establecer un ancho fijo de nuestro elemento*/
+    /*IMPORTANTE*/
+        box-sizing: border-box;
+    /*Max width es mucho más flexible si se hace más pequeña la pantalla*/
+    /*width: 300px;*/
+        max-width:300px ;
+            /*max-width: 100%; co n portcentaje*/
+        /*max-height: 100px;*/
+}

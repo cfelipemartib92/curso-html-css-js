@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    text-shadow: 2px 2px 2px #a8dadc;
+    color: #e63046;
+}
+div.contenedor{
+    display: flex; /*Ayda propiedad flex*/
+    background-color: #560bad;
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    flex-direction: row; /*Ajustar textos de cierta manera dentro de un div*/
+    /*Wrap sirve para envolver los elementos*/
+    flex-wrap: wrap;
+    flex-flow: row wrap; /*Acá se indican las dos propiedades en una sola linea*/
+    justify-content: center; /*Para ajustar los textos en un costado*/
+    height: 300px;
+    align-items: stretch; /*Centrar en eje y*/
+    /* align-content: center;  */
+}
+div.contenedor > p{
+    background-color: #4895ef;
+    color: #f1faee;
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.5em;
+}

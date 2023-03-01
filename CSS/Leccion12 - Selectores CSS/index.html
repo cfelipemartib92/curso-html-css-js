@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores combinados en CSS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <h1>Selectores CSS</h1>
+    <h2>Selectores Combinados CSS</h2>
+        <div class="contenedor descendiente">
+            Selectores descendientes (en cualquier nivel interno):
+            <p>Primer renglón</p>
+            <p>Segundo renglón</p>
+            <section>
+                <p>Tercer renglon</p>
+            </section>
+        </div>
+        <div class="contenedor hijo">
+            Selectores Hijo (Child):
+            <p>Primer renglón</p>
+            <p>Segundo renglón</p>
+            <section>
+                <p>Tercer renglon (no es hijo directo)</p>
+            </section>
+            <div>
+                <p>Cuarto renglon dentro de otro div</p>
+            </div>
+            <p>Quinto renglon (hijo directo)</p>
+        </div>
+        <div class="test">
+            <p>
+                Mollit nulla nulla duis ea magna exercitation minim do incididunt velit. Cillum eu magna deserunt aute ad. Exercitation dolore proident enim ea veniam in ex proident eiusmod irure. Qui laboris eu sunt officia labore. Labore voluptate ex labore minim.
+
+                Proident mollit qui quis eiusmod adipisicing voluptate dolor non. Labore ex excepteur ut esse velit anim occaecat exercitation tempor aliqua et exercitation eiusmod. Dolore est do officia quis duis sunt mollit ullamco id laboris dolore nostrud consectetur magna. Consequat veniam eu eu excepteur esse aute tempor ad Lorem nulla. Aliqua sit reprehenderit sunt eiusmod ipsum veniam fugiat esse eiusmod quis amet. Magna ea culpa sint et in non aliquip ullamco incididunt duis do reprehenderit.
+
+                Tempor dolor sint sunt magna sint occaecat minim ex ipsum labore anim mollit. Et et aliqua occaecat sit commodo voluptate consectetur sit excepteur nostrud. In non amet irure consequat veniam ut irure sunt elit laboris anim.
+            </p>
+        </div>
+    <h2>Selectores Adyacente CSS</h2>
+        <div class="contenedor adyacente">
+            Selectores selector adyacente:
+            <p>Primer renglón</p>
+        </div>
+        <p>Segundo renglon (p adyacente - sibling - exactamente despuès del elemento configurado)</p>
+        <p>Tercer renglón no adyacente - no aplica el color verde</p>
+
+    <h2>Selectores Hermano - sibling</h2>
+
+        <div class="contenedor hermano">
+            Selectores selector hermano - al mismo nivel:
+            <p>Primer renglón - no se seleccionan por que no está al mismo nivel</p>
+        </div>
+        <p>Segundo renglon (hermano)</p>
+        <p>Tercer renglón no adyacente - pero sigue siendo hermano</p>
+
+
+    <h1>Pseudo clases en CSS</h1>
+        <div class="contenedor oculto">
+            Pasa por encima
+            <p>Se muestra el parrafo</p>
+        </div>
+
+        <div class="contenedor primero">
+            <p>Primer párrafo</p>
+            <p>Segundo parrafo</p>
+        </div>
+
+    <h1>Pseudo Elemento en CSS</h1>
+        <div class="contenedor1">
+            <p>Selecciona el texto - se pone amarillo con rojo</p>
+            <p>SÓLO LA PRIMERA LINEA SE MUESTRE EN SMALL CAPS Non labore ex non magna laboris id deserunt reprehenderit. Ea voluptate culpa ut amet minim cupidatat velit amet dolore proident esse id veniam tempor. Qui amet irure laborum fugiat consectetur eu. AL FINAL SE AGREGÒ UN ELEMENTO</p>
+        </div>
+    <h1>Transparencia en CSS</h1>
+    <div class="contenedor2">
+        <p>Pasa por encima de la imagen</p>
+        <img src="http://globalmentoring.com.mx/imagenes/html5.png" alt="Logo HTML5">
+    </div>
+        
+</body>
+</html>

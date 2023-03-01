@@ -1,0 +1,103 @@
+h1{
+    text-align: center;
+    color: #e63946;
+}
+
+h2{
+    text-align: center;
+    color: #d8512f;
+}
+
+div.contenedor{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+    text-align: center;
+}
+div.contenedor.descendiente p{
+    background-color: #fdffb6;
+}
+div.contenedor.hijo > p{
+    background-color: #ffc6ff;
+}
+
+div.test{
+    border: 3px solid rgb(165, 25, 25);
+    padding: 10px 10px 10px 10px;
+    align-items: center;
+    margin: auto;
+    width: 30%;
+    height: 50px;
+    overflow: auto;
+}
+div.contenedor.adyacente + p{
+    background-color: #caffbf;
+}
+div.contenedor.hermano ~ p{
+    background-color: #9bf6ff;
+}
+
+div.contenedor:hover {
+    background-color: #457b9d;
+    color: #f1faee;    
+}
+div.contenedor.oculto p{
+    display: none;
+}
+div.contenedor.oculto:hover p{
+    display: block;
+    background-color: #a8dadc;
+    color: #023e8a;
+    padding: 15px;
+}
+div.contenedor.primero p:first-child{
+    font-variant: small-caps;
+}
+
+div.contenedor1{
+    width: 80%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+    text-align: center;
+}
+div.contenedor1 p::selection{
+    color: red;
+    background-color: yellow;
+}
+div.contenedor1 p::first-line{
+    font-variant: small-caps;
+    color: #2c641b;
+}
+div.contenedor1 p::first-letter{ /*color rojo primera lina*/
+    color: red;
+    font-size: 1.5em;
+}
+/*AGREGAR UN ELEMENTO ANTES Y DESPUÈS DEL PARRAFO*/
+div.contenedor1 p::before{
+    content: "- ";
+}
+div.contenedor1 p::after{
+    content: " -";
+    color: #c50c0c;
+}
+div.contenedor2{
+    width: 30%;
+    height: 20%;
+    margin: auto;
+    border: 3px solid #a8dadc;
+    padding: 15px;
+    color: #457b9d;
+    text-align: center;
+}
+img{
+    opacity: 0.5;
+}
+img:hover{
+    opacity: 1;
+}

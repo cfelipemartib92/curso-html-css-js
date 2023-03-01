@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!--Para reconocer acentos-->
+    <title>Ejemplo DOM con JavaScript</title>
+    <style>
+        .azul{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="azul" id="cabecero">Ejemplo DOM con JavaScript</h1>
+    <P class="azul" id="parrafo">Saludos desde un Parrafiqui</P>
+    <p class="azul" id="parrafo2">Parrafo 2</p>
+    <p id="parrafo3">Parrafo 3</p>
+
+    <script> //ESTO SE VE DESDE LA CONSOLA 
+        console.log('Saludos desde JavaScript')
+        //El Script siempre debe ir después del html
+        //usar el objeto document para acceder a los elementos html
+        //el metodo getElementById permite acceder elementos html
+        //regresa objeto no metod
+        //innerHTML muestra lo que contiene la etiqueta, sin eso muestra todas propeidades etiqueta
+        let cabecero = document.getElementById('cabecero');
+        console.log('Valor Cabecero: ' + cabecero.innerHTML);
+        //otra manera con inner en otra parte
+            // let cabecero = document.getElementById('cabecero').innerHTML;
+            // console.log('Valor Cabecero: ' + cabecero);
+
+        //parrafo
+        let parrafo = document.getElementById('parrafo');
+        console.log('Valor Parrafo: '+ parrafo.innerHTML);
+
+        //otro parrafo con template literals
+        let parrafo2 = document.getElementById('parrafo2');
+        console.log(`P2 dice: ${parrafo2.innerHTML}`);
+
+        //modificar contenido parrafo 2
+        parrafo2.innerHTML = 'Nuevo Contenido editado desde JS parrafo 2';
+
+        //Modificar cabecero
+        cabecero.innerHTML = 'Nuevo Encabezado editado';  
+
+        //interactuiar con las etiquetas - no necesita id de elementos
+        //contar el número de parrafos
+        let parrafos = document.getElementsByTagName('p');
+        console.log(`Número. Parrafos: ${parrafos.length}`);
+        //imprimir contenido de los parrafos
+        for(let i=0;i<parrafos.length; i++){
+            console.log(`i:${i}. - ${parrafos[i].innerHTML}`);
+        }
+        //Metodo recuperar elementos httml que contengan la misma clase css
+            let elementosAzules = document.getElementsByClassName('azul');
+            console.log(`Número. Elementos Azules: ${elementosAzules.length}`);
+        //imprimir contenido de los parrafos
+            //sintax xlasica
+                for(let j=0;j<elementosAzules.length; j++){
+                    console.log(`j:${j}. - ${elementosAzules[j].innerHTML}`);  
+                }
+        //Tambien podemos usar querySelectorAll para sólo elementos con cla x
+            let parrafosAzules = document.querySelectorAll('p.azul');
+            console.log(`Número. Parrafos Azules: ${parrafosAzules.length}`);
+        //Sintaxis for of
+            for(let parrafoAzul of parrafosAzules){
+                console.log(`e: ${parrafoAzul.innerHTML}`);
+            }
+        
+        
+    </script>
+</body>
+</html>

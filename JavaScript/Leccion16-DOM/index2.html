@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!--Para reconocer acentos-->
+    <title>Ejemplo Formulario con JavaScript</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>Formulario HTML con JS</h1>
+    <form id="formulario" >
+            Nombre: <input type="text" name="nombre" value="Felipendo">
+        <br>
+            Apellido: <input type="text" name="apellido" value="Perez">
+        <br>
+    </form>
+    <br>
+    <button onclick="mostrarValores()">Mostrar</button>
+    <br><br>
+    <div id="valores">
+
+    </div>
+</body>
+<script>
+        // function mostrarValores(){
+        //     let usuario = document.forms['formulario'];
+        //     let texto = '';
+        //     for (let elemento of usuario){
+        //         texto += elemento.value+ '</br>';
+        //     }
+        //     // console.log(texto);
+        //     document.getElementById('valores').innerHTML = texto;
+        // }
+    //ACCEDER A LOS ELEMENTOS POR SEPARADO
+        function mostrarValores(){
+            let usuario = document.forms['formulario'];
+            let texto = '';
+            let nombre = usuario['nombre'];
+            let apellido = usuario['apellido'];
+            
+            texto = nombre.value + '<br/>' + apellido.value; //el value trae lo que hay dentro de textbox
+            // console.log(texto); - ya no imprimimos en consola sino en servidor
+            document.getElementById('valores').innerHTML = texto;
+        }   
+
+</script>
+</html>

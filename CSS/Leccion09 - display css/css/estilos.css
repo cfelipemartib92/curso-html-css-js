@@ -1,0 +1,36 @@
+h1, div, p{
+    border: 3px solid blueviolet;
+    text-align: center;
+    color: cornflowerblue;
+    padding: 10px;
+/*Display block hace que todo se vea soplo en una linea*/
+    /*display: block;*/
+/*Display inline permite que todos se vean en una sola linea*/
+    display: block;
+}
+span{
+    display: inline;
+    border: 1px solid blue;
+}
+a{
+    display: block;
+    /*Son por default left*/
+    text-align: left;
+}
+li{
+    display: inline;
+}
+h3{
+    color: crimson;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+.h1d{
+    /*OCULTAR POR COMPLETO ALGUN ELEMENTO*/
+    display: none;
+}
+.pvisible{
+    visibility: hidden;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> <!--Para reconocer acentos-->
+    <title>Manejo DOM con JavaScript</title>
+    <style>
+    </style>
+</head>
+<body>
+
+    <h1 id="titulo">Manejo de onfocus y onblur</h1>
+    <br>
+    Nombre: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br><br>
+    Apellido: <input type="text" onfocus="cambiar(this)" onblur="regresar(this)"/>
+    <br><br>
+    Nombre desde JS: <input type="text" id="NombreJs">
+    <br><br>
+    Apellido desde JS: <input type="text" id="ApellidoJs">
+    <br><br>
+    <h1>Funciones flecha con addeventlistener</h1>
+    <br><br>
+    Nombre Funcion Flecha: <input type="text" id="NombreFF">
+    <br><br>
+    Apellido Funcion Flecha: <input type="text" id="ApellidoFF">
+    <br><br>
+    <br><br>
+    <h1>Delegación de funciones</h1>
+    <br><br>
+    <form id="formu">
+        Nombre form: <input type="text" id="NombreForm">
+        <br><br>
+        Apellido form: <input type="text" id="ApellidoForm"> 
+    </form>
+
+    <script>
+    //FUNCIONES CLÁSICAS
+        //onblur y onfocus
+            function cambiar(elementoInput){
+                elementoInput.style.background='yellow';
+            }
+
+            function regresar(elementoInput){
+                elementoInput.style.background='transparent';
+            }
+        //eventos addeventlistener 
+            document.getElementById('NombreJs').addEventListener('focus', cambiar1); //Cambiar1 es una funcion callback
+            document.getElementById('ApellidoJs').addEventListener('focus', cambiar1);
+            function cambiar1(evento){
+                //target nos regresa el elemento tupo input text como this
+                let componente = evento.target;
+                componente.style.background = 'green';
+            }
+            //evento onblur
+            document.getElementById('NombreJs').addEventListener('blur', regresar1); //Cambiar1 es una funcion callback
+            document.getElementById('ApellidoJs').addEventListener('blur', regresar1);
+            function regresar1(evento){
+                //target nos regresa el elemento tupo input text como this
+                evento.target.style.background = 'transparent';
+            }
+//FUNCIONES FLECHA -- ANONIMA Y NO ES REUTILIZABLE :(
+    document.getElementById('NombreFF').addEventListener('focus',(evento)=>{
+        evento.target.style.background='blue';
+    });
+    document.getElementById('ApellidoFF').addEventListener('focus',(evento)=>{
+        evento.target.style.background='pink';
+    });
+    //evento onblur
+    document.getElementById('NombreFF').addEventListener('blur',(evento)=>{
+        evento.target.style.background='';
+    });
+    document.getElementById('ApellidoFF').addEventListener('blur',(evento)=>{
+        evento.target.style.background='';
+    });
+//DELEGACIÓN DE EVENTOS EN JS  - FORMULARIO
+    const formu = document.getElementById('formu');
+    //al addeventlistner se le agrega TRUE al final para afecte internamente el form
+    formu.addEventListener('focus',(evento)=>{
+        evento.target.style.background='red';
+    }, true);
+    formu.addEventListener('blur',(evento)=>{
+        evento.target.style.background='';
+    }, true);
+            
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Sofia&family=Trocchi&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Sofia&family=Trocchi&display=swap');*/
+ 
+/*EFECTO FONTS CSS 1 ES DECIR EL ANTERIOR CON EFECTO*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@500|Sofia&effect=shadow-multiple|Trocchi&display=swap');
+
+
+h1{
+    color: #ef476f;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #ced4da;
+    font-family: 'Sofia', cursive;
+}
+.caja{
+    padding: 5px;
+    width: 40%;
+    height: 80px;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    margin: 10px;
+    font-size: 20px;
+    float: left;
+}
+
+.caja.serif{
+    background-color: #5a189a;
+}
+.fuente_times{
+    font-family: 'Roboto';
+    font-style: normal;
+    /*Primera mayuscula más grande*/
+    font-variant: small-caps;
+    /*Tamaño de la letra*/
+    font-size: 25px;
+    
+}
+.fuente_georgia{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-variant: initial;
+    font-size: 1.2em; /*16px/16=1em*/
+}
+.caja.sans-serif{
+    background-color: #00b4d8;
+}
+.fuente_arial{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    /*Par aajustar el tamaño de las letras según el tamaño de la ventana*/
+    font-size: 2vw; /*View widht (viewport) 1vw=1%*/
+}
+.fuente_verdana{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 900;
+}
+.monospace{
+    background-color: #f15bb5;
+}
+.fuente_courier{
+    font-family: 'Courier New', Courier, monospace;
+}
+.cursive{
+    background-color: #ff8500;
+}
+.fuente_lucida{
+    font-family: 'Lucida handwriting',cursive;
+}
+.google{
+    background-color: #149229;
+}
+.google{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.unico{
+    background-color: #0e82c5;
+}
+.unico{
+    /*Orden: font-style, font-variant, font-weight, *font-size/ line-height, *font-family*/
+    font: italic small-caps bolder 20px Roboto, sans-serif;
+}
